@@ -1,5 +1,5 @@
 // Source tracking helper.
-// It reads ?source=... from the URL and stores it in MailerLite's signup_source field.
+// Reads ?source=... from the URL and stores it in MailerLite's signup_source field.
 //
 // Example:
 // https://lab.pierrehenry.dev?source=linkedin-fire-001

@@ -1,1 +1,54 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">{% include seo.html %}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav"><a class="brand" href="{{ '/' | relative_url }}"><span class="mark">✦</span><span><strong>Your Success</strong><small>is Closer Than You Think™</small></span></a><nav><a href="{{ '/books/' | relative_url }}">Book Action Library</a><a href="{{ '/#how-it-works' | relative_url }}">How it works</a><a class="nav-cta" href="{{ '/#signup' | relative_url }}">Get the daily action</a></nav></div></header><main id="main">{{ content }}</main><footer><div class="container footer"><div><strong>Your Success is Closer Than You Think™</strong><p>One daily book-based action for engineers working towards FIRE.</p></div><div><strong>Read less. Apply more.</strong><p><a href="{{ '/books/' | relative_url }}">Browse the library</a></p></div></div></footer><script src="{{ '/assets/js/main.js' | relative_url }}"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% include seo.html %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
+        <span class="brand-name">Your Success</span>
+        <span class="brand-subtitle">is Closer Than You Think™</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="{{ '/books/' | relative_url }}">Book Action Library</a>
+        <a href="{{ '/#how-it-works' | relative_url }}">How it works</a>
+        <a class="nav-button" href="{{ '/#signup' | relative_url }}">Get the daily action</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Your Success is Closer Than You Think™</strong>
+        <p>One daily book-based action for engineers working towards FIRE.</p>
+      </div>
+
+      <div>
+        <strong>Read less. Apply more.</strong>
+        <p><a href="{{ '/books/' | relative_url }}">Browse the library</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
