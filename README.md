@@ -5,10 +5,10 @@ GitHub Pages-ready Jekyll site with a landing page and Markdown-first Book Actio
 ## What this is
 
 - Landing page for the MailerLite newsletter
-- `/books/` library index
-- one Markdown file per book in `_books/`
-- YAML front matter for SEO, CTA tracking, raw notes and automation
-- source tracking for MailerLite hidden fields
+- `/books/` index
+- One Markdown file per book in `_books/`
+- YAML front matter for SEO, CTA tracking, and notes
+- Source tracking via MailerLite hidden fields
 
 ## Python setup (one-time)
 
@@ -17,17 +17,11 @@ From Python 3.11 onwards, many macOS and Linux systems restrict global `pip inst
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-```
-
-> **Windows:** use `venv\Scripts\activate`
-
-Install dependencies if needed:
-
-```bash
 pip install -r requirements.txt
 ```
 
-> Activate the environment each time you open a new terminal before running scripts.
+> **Windows:** `venv\Scripts\activate`
+> Activate the environment each time you open a new terminal.
 
 ## Add a new book
 
@@ -39,13 +33,13 @@ Then edit `_books/deep-work.md`.
 
 ## MailerLite
 
-Replace the placeholder form in `index.html` with your MailerLite embed. Keep this hidden field if possible:
+Replace the placeholder form in `index.html` with your embed. Keep this hidden field:
 
 ```html
 <input type="hidden" name="fields[source]" id="sourceField">
 ```
 
-Use tracked links like:
+Use tracked links:
 
 ```text
 https://lab.pierrehenry.dev?source=linkedin-fire-001
@@ -53,7 +47,7 @@ https://lab.pierrehenry.dev?source=linkedin-fire-001
 
 ## GitHub Pages
 
-The `CNAME` file is already set to:
+`CNAME` is set to:
 
 ```text
 lab.pierrehenry.dev
@@ -63,48 +57,51 @@ Use GitHub Actions as the Pages source.
 
 ## Brand colours
 
-- Inter
-- #1F6F4A
-- #C8A45D
-- #111827
-- #4B5563
-- #E5E7EB
-- #FAF7F0
+- Inter  
+- #1F6F4A  
+- #C8A45D  
+- #111827  
+- #4B5563  
+- #E5E7EB  
+- #FAF7F0  
 
-## Article email capture blocks
+## Article email capture
 
-Each book article now includes newsletter capture blocks:
+Each article includes:
 
-- one near the top of the article
-- one at the bottom of the article
-- one sticky sidebar CTA that jumps to the bottom capture form
+- Top capture block  
+- Bottom capture block  
+- Sticky sidebar CTA  
 
-The capture block lives in:
+Located in:
 
 ```text
 _includes/email-capture.html
 ```
 
-To connect MailerLite, replace the placeholder form inside the include with your MailerLite embedded form HTML.
+Replace the form with your MailerLite embed.
 
-Recommended hidden field:
+Hidden field:
 
 ```html
 <input type="hidden" name="fields[source]" id="sourceField">
 ```
 
-The JavaScript will fill that field from the URL parameter:
+The script fills it from:
 
 ```text
 ?source=linkedin-fire-001
 ```
 
-If no URL source exists, the book slug is used as the local fallback source.
+Fallback: book slug.
 
 ## Author
 
 [![Pierre-Henry Soria](https://avatars0.githubusercontent.com/u/1325411?s=200)](https://ph7.me "Pierre-Henry Soria, Software Developer")
 
-Made with ❤️ by **[Pierre-Henry Soria](https://pierrehenry.be)**. A super passionate & enthusiastic problem-solver engineer. Also a true cheese 🧀, ristretto ☕️, and dark chocolate lover! 😋
+Made with ❤️ by **[Pierre-Henry Soria](https://pierrehenry.be)**
 
-[![@phenrysay](https://img.shields.io/badge/x-000000?style=for-the-badge&logo=x)](https://x.com/phenrysay "Follow Me on X") [![pH-7](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pH-7 "My GitHub") [![BlueSky](https://img.shields.io/badge/BlueSky-00A8E8?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/pierrehenry.dev "Follow Me on BlueSky") [![YouTube Video](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@pH7Programming "My Channel, NextGen Dev: AI & Code")
+[![@phenrysay](https://img.shields.io/badge/x-000000?style=for-the-badge&logo=x)](https://x.com/phenrysay)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pH-7)
+[![BlueSky](https://img.shields.io/badge/BlueSky-00A8E8?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/pierrehenry.dev)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@pH7Programming)
