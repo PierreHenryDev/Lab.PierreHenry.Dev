@@ -10,6 +10,25 @@ GitHub Pages-ready Jekyll site with a landing page and Markdown-first Book Actio
 - YAML front matter for SEO, CTA tracking, raw notes and automation
 - source tracking for MailerLite hidden fields
 
+## Python setup (one-time)
+
+From Python 3.11 onwards, many macOS and Linux systems restrict global `pip install` in system-managed environments ([PEP 668](https://peps.python.org/pep-0668/)). Use a **virtual environment** to install dependencies in an isolated project sandbox.
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+> **Windows:** use `venv\Scripts\activate`
+
+Install dependencies if needed:
+
+```bash
+pip install -r requirements.txt
+```
+
+> Activate the environment each time you open a new terminal before running scripts.
+
 ## Add a new book
 
 ```bash
@@ -51,7 +70,6 @@ Use GitHub Actions as the Pages source.
 - #4B5563
 - #E5E7EB
 - #FAF7F0
-
 
 ## Article email capture blocks
 
