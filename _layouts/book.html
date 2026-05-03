@@ -1,0 +1,104 @@
+---
+layout: default
+---
+<article class="book-page">
+  <section class="book-hero">
+    <div class="container book-hero-grid">
+      <div>
+        <p class="eyebrow">Book Action Guide</p>
+        <h1>{{ page.title }}</h1>
+        <p class="lead">{{ page.summary.one_line }}</p>
+
+        <div class="meta-pills" aria-label="Book metadata">
+          <span>{{ page.book_title }}</span>
+          <span>{{ page.author }}</span>
+          <span>{{ page.category }}</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#bookSignupTop">Get the daily action</a>
+          <a class="button secondary" href="#actions">See the actions</a>
+        </div>
+      </div>
+
+      <aside class="book-card">
+        <p class="card-label">For</p>
+        <h2>{{ page.audience }}</h2>
+        <p>{{ page.summary.promise }}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section slim-section">
+    <div class="container">
+      {% include email-capture.html
+        id="bookSignupTop"
+        source=page.slug
+        variant="top"
+        headline="Want the daily action version?"
+        description="This page gives you the book guide. The email gives you one small action each morning, adapted for engineers working towards FIRE."
+        button="Join the free email"
+      %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-grid">
+      <div class="article-content">
+        {{ content }}
+
+        <section id="actions" class="action-block">
+          <h2>Actions from this book</h2>
+          <div class="action-list">
+            {% for action in page.actions %}
+            <article class="action-card">
+              <div>
+                <span class="action-time">{{ action.time_required }}</span>
+                <h3>{{ action.title }}</h3>
+              </div>
+              <p><strong>Why it matters:</strong> {{ action.why }}</p>
+              <p><strong>Action:</strong> {{ action.action }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        {% if page.session.youtube_url or page.session.spotify_url %}
+        <section class="watch-listen">
+          <h2>Watch or listen</h2>
+          <div class="link-cards">
+            {% if page.session.youtube_url %}
+            <a class="mini-card" href="{{ page.session.youtube_url }}">Watch on YouTube</a>
+            {% endif %}
+            {% if page.session.spotify_url %}
+            <a class="mini-card" href="{{ page.session.spotify_url }}">Listen on Spotify</a>
+            {% endif %}
+          </div>
+        </section>
+        {% endif %}
+
+        {% include email-capture.html
+          id="bookSignupBottom"
+          source=page.slug
+          variant="bottom"
+          headline="Get the next action tomorrow morning."
+          description="If this book gave you one useful idea, the newsletter turns books like this into daily actions you can actually apply."
+          button="Get the daily action"
+        %}
+      </div>
+
+      <aside class="sidebar">
+        <div class="sticky-card">
+          <h2>3 actions from this book</h2>
+          {% for action in page.actions %}
+          <div class="action-mini">
+            <strong>{{ action.title }}</strong>
+            <span>{{ action.time_required }}</span>
+          </div>
+          {% endfor %}
+          <a class="button primary full" href="#bookSignupBottom">{{ page.cta.label }}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</article>

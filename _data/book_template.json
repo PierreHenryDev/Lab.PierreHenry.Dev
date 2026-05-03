@@ -1,0 +1,15 @@
+{
+  "title": "Book Title for Engineers Working Towards FIRE",
+  "book_title": "Book Title",
+  "author": "Author Name",
+  "slug": "book-slug",
+  "status": "draft",
+  "actions": [
+    {
+      "title": "Action title",
+      "time_required": "5 minutes",
+      "why": "Why it matters",
+      "action": "What to do"
+    }
+  ]
+}

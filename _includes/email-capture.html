@@ -1,0 +1,36 @@
+{%- assign capture_id = include.id | default: "emailCapture" -%}
+{%- assign source = include.source | default: "book-page" -%}
+{%- assign headline = include.headline | default: "Get one daily book-based action." -%}
+{%- assign description = include.description | default: "Join the free email for engineers working towards FIRE. Each morning, get one practical action from books on money, productivity, career and investing." -%}
+{%- assign button = include.button | default: "Get the daily action" -%}
+
+<section class="email-capture email-capture-{{ include.variant | default: 'default' }}" aria-labelledby="{{ capture_id }}Title">
+  <div class="email-capture-content">
+    <p class="eyebrow">Free daily email</p>
+    <h2 id="{{ capture_id }}Title">{{ headline }}</h2>
+    <p>{{ description }}</p>
+
+    <div class="trust-row" aria-label="What you will receive">
+      <span>One idea</span>
+      <span>One action</span>
+      <span>5 to 10 minutes</span>
+    </div>
+  </div>
+
+  <div class="email-capture-form">
+    <!-- MailerLite integration:
+         Replace this placeholder form with your MailerLite embedded form HTML.
+         Keep the hidden source field if possible:
+         <input type="hidden" name="fields[source]" id="{{ capture_id }}Source">
+    -->
+    <form class="local-form compact" action="#" method="post" data-placeholder-form>
+      <label for="{{ capture_id }}Email">Email address</label>
+      <div class="form-row">
+        <input id="{{ capture_id }}Email" name="email" type="email" placeholder="you@example.com" required>
+        <input type="hidden" name="fields[source]" id="{{ capture_id }}Source" value="{{ source }}">
+        <button class="button primary" type="submit">{{ button }}</button>
+      </div>
+      <p class="form-note">No long summaries. No extra theory. Just daily action.</p>
+    </form>
+  </div>
+</section>

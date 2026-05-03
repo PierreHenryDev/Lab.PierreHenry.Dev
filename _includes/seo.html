@@ -1,0 +1,16 @@
+{% assign t = page.seo.meta_title | default: page.title | default: site.title %}
+{% assign d = page.seo.meta_description | default: page.description | default: site.description %}
+{% assign c = page.seo.canonical_url | default: page.url | absolute_url %}
+<title>{{ t | escape }}</title>
+<meta name="description" content="{{ d | strip_html | strip_newlines | escape }}">
+<link rel="canonical" href="{{ c }}">
+<meta property="og:type" content="{% if page.collection == 'books' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ t | escape }}">
+<meta property="og:description" content="{{ d | strip_html | strip_newlines | escape }}">
+<meta property="og:url" content="{{ c }}">
+<meta property="og:image" content="{{ '/assets/img/social-card.svg' | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t | escape }}">
+<meta name="twitter:description" content="{{ d | strip_html | strip_newlines | escape }}">
+<meta name="twitter:image" content="{{ '/assets/img/social-card.svg' | absolute_url }}">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"{% if page.collection == 'books' %}Article{% else %}WebSite{% endif %}","name":{{ t | jsonify }},"description":{{ d | jsonify }},"url":{{ c | jsonify }},"publisher":{"@type":"Organization","name":{{ site.title | jsonify }}}}</script>

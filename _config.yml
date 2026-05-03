@@ -1,0 +1,17 @@
+title: "Your Success is Closer Than You Think™"
+description: "One daily book-based action for engineers working towards FIRE."
+url: "https://lab.pierrehenry.dev"
+baseurl: ""
+collections:
+  books:
+    output: true
+    permalink: /books/:name/
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}
+  - scope: {path: "", type: books}
+    values: {layout: book}
+markdown: kramdown
+kramdown: {input: GFM}
+plugins: [jekyll-sitemap, jekyll-feed]
+exclude: [README.md, scripts/, node_modules/, .env]
