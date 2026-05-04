@@ -19,6 +19,7 @@
 }
 
 html {
+  scroll-behaviour: smooth;
   scroll-behavior: smooth;
 }
 
@@ -373,6 +374,7 @@ h3 {
   font-weight: 900;
 }
 
+/* Book action cards */
 .book-tile {
   min-height: 430px;
   display: flex;
@@ -446,6 +448,14 @@ h3 {
   gap: 10px;
   align-items: center;
   text-decoration: none;
+}
+
+.book-hero .meta-pills {
+  margin-bottom: 24px;
+}
+
+.book-hero .hero-actions {
+  margin-top: 0;
 }
 
 .tile-meta span,
@@ -623,6 +633,7 @@ input[type="email"]::placeholder {
   margin-bottom: 0;
 }
 
+/* Book article pages */
 .book-page .book-hero {
   padding: 76px 0 54px;
 }
