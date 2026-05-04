@@ -59,9 +59,23 @@ Use tracked links:
 https://lab.pierrehenry.dev?source=linkedin-fire-001
 ```
 
+The JavaScript stores the `source` value in MailerLite as:
+
+```text
+signup_source
+```
+
+Fallback values include:
+
+```text
+homepage-hero
+homepage-bottom
+book slug
+```
+
 ## GitHub Pages
 
-`CNAME` is set to:
+`CNAME`:
 
 ```text
 lab.pierrehenry.dev
@@ -69,45 +83,27 @@ lab.pierrehenry.dev
 
 Use GitHub Actions as the Pages source.
 
-## Brand colours
-
-- Inter  
-- #1F6F4A  
-- #C8A45D  
-- #111827  
-- #4B5563  
-- #E5E7EB  
-- #FAF7F0  
-
-## Article email capture
-
-Each article includes:
-
-- Top capture block  
-- Bottom capture block  
-- Sticky sidebar CTA  
-
-Located in:
+## Brand
 
 ```text
-_includes/email-capture.html
+Font: Inter
+Primary: #1F6F4A
+Secondary: #C8A45D
+Heading: #111827
+Text: #4B5563
+Border: #E5E7EB
+Background: #FAF7F0
 ```
 
-Replace the form with your MailerLite embed.
+## Article capture
 
-Hidden field:
-
-```html
-<input type="hidden" name="fields[source]" id="sourceField">
-```
-
-The script fills it from:
+Each book article includes:
 
 ```text
-?source=linkedin-fire-001
+Top capture block
+Bottom capture block
+Sticky sidebar CTA
 ```
-
-Fallback: book slug.
 
 ## Author
 
@@ -115,7 +111,5 @@ Fallback: book slug.
 
 Made with ❤️ by **[Pierre-Henry Soria](https://pierrehenry.be)**. A super passionate & enthusiastic AI Product Engineer. Also a true cheese 🧀, ristretto ☕️, and dark chocolate lover! 😋
 
-[![@phenrysay](https://img.shields.io/badge/x-000000?style=for-the-badge&logo=x)](https://x.com/phenrysay)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pH-7)
-[![BlueSky](https://img.shields.io/badge/BlueSky-00A8E8?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/pierrehenry.dev)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@pH7Programming)
+
+[![@phenrysay](https://img.shields.io/badge/x-000000?style=for-the-badge&logo=x)](https://x.com/phenrysay) [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pH-7) [![BlueSky](https://img.shields.io/badge/BlueSky-00A8E8?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/pierrehenry.dev) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@pH7Programming)
