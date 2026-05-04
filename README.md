@@ -10,9 +10,9 @@ GitHub Pages-ready Jekyll site with a landing page and Markdown-first Book Actio
 - YAML front matter for SEO, CTA tracking, and notes
 - Source tracking via MailerLite hidden fields
 
-## Python setup (one-time)
+## Python setup
 
-From Python 3.11 onwards, many macOS and Linux systems restrict global `pip install` in system-managed environments ([PEP 668](https://peps.python.org/pep-0668/)). Use a **virtual environment** to install dependencies in an isolated project sandbox.
+Use a virtual environment:
 
 ```bash
 python3 -m venv venv
@@ -20,8 +20,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-> **Windows:** `venv\Scripts\activate`
-> Activate the environment each time you open a new terminal.
+Windows:
+
+```bash
+venv\Scripts\activate
+```
 
 ## Add a new book
 
@@ -29,14 +32,25 @@ pip install -r requirements.txt
 python3 scripts/new_book_action.py --title "Deep Work" --author "Cal Newport" --category "Focus and career leverage"
 ```
 
-Then edit `_books/deep-work.md`.
+Then edit:
 
-## MailerLite
+```text
+_books/deep-work.md
+```
 
-Replace the placeholder form in `index.html` with your embed. Keep this hidden field:
+## MailerLite tracking
+
+Forms live in:
+
+```text
+_includes/email-capture.html
+_includes/email-capture-inline.html
+```
+
+Keep this hidden field:
 
 ```html
-<input type="hidden" name="fields[source]" id="sourceField">
+<input type="hidden" name="fields[signup_source]" id="{{ capture_id }}Source" value="{{ source }}">
 ```
 
 Use tracked links:

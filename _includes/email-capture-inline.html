@@ -1,0 +1,43 @@
+{%- assign capture_id = include.id | default: "inlineEmailCapture" -%}
+{%- assign source = include.source | default: "inline-signup" -%}
+{%- assign title = include.title | default: "Get tomorrow’s action in your inbox." -%}
+{%- assign button = include.button | default: "Get the daily action" -%}
+{%- assign note = include.note | default: "Free daily email. No long summaries. No extra theory." -%}
+
+<div class="hero-signup-card" aria-label="Subscribe to the free daily email">
+  <p class="hero-signup-title">{{ title }}</p>
+
+  <form
+    class="local-form hero-form mailerlite-form"
+    action="https://assets.mailerlite.com/jsonp/2307728/forms/186431284198769872/subscribe"
+    method="post"
+    target="_blank"
+  >
+    <label class="sr-only" for="{{ capture_id }}Email">Email address</label>
+
+    <div class="form-row">
+      <input
+        id="{{ capture_id }}Email"
+        name="fields[email]"
+        type="email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      >
+
+      <input
+        type="hidden"
+        name="fields[signup_source]"
+        id="{{ capture_id }}Source"
+        value="{{ source }}"
+      >
+
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+
+      <button class="button primary" type="submit">{{ button }}</button>
+    </div>
+  </form>
+
+  <p class="form-note">{{ note }}</p>
+</div>

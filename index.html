@@ -18,43 +18,13 @@ seo:
         One daily book-based action to reduce wasted spending, save time, invest smarter and move closer to FIRE.
       </p>
 
-      <div class="hero-signup-card" aria-label="Subscribe to the free daily email">
-        <p class="hero-signup-title">Get tomorrow’s action in your inbox.</p>
-
-        <form
-          class="local-form hero-form mailerlite-form"
-          action="https://assets.mailerlite.com/jsonp/2307728/forms/186431284198769872/subscribe"
-          method="post"
-          target="_blank"
-        >
-          <label class="sr-only" for="heroTopEmail">Email address</label>
-
-          <div class="form-row">
-            <input
-              id="heroTopEmail"
-              name="fields[email]"
-              type="email"
-              placeholder="you@example.com"
-              autocomplete="email"
-              required
-            >
-
-            <input
-              type="hidden"
-              name="fields[signup_source]"
-              id="heroTopSource"
-              value="homepage-hero"
-            >
-
-            <input type="hidden" name="ml-submit" value="1">
-            <input type="hidden" name="anticsrf" value="true">
-
-            <button class="button primary" type="submit">Get the daily action</button>
-          </div>
-        </form>
-
-        <p class="form-note">Free daily email. No long summaries. No extra theory.</p>
-      </div>
+      {% include email-capture-inline.html
+        id="heroTop"
+        source="homepage-hero"
+        title="Get tomorrow’s action in your inbox."
+        button="Get the daily action"
+        note="Free daily email. No long summaries. No extra theory."
+      %}
 
       <div class="promise-card">
         <strong>Read less. Apply more.</strong>
