@@ -33,7 +33,7 @@ seo:
   meta_description: "Three practical ideas and actions from {a.title} for engineers working towards FIRE."
   canonical_url: "https://lab.pierrehenry.dev/books/{slug}/"
 cta:
-  label: "Get one daily book-based action"
+  label: "Get the weekly action plan"
   url: "https://lab.pierrehenry.dev?source=book-{slug}"
 summary:
   one_line: "Write one clear sentence about why this book matters."

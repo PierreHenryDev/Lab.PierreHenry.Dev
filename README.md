@@ -4,7 +4,7 @@ GitHub Pages-ready Jekyll site with a landing page and Markdown-first Book Actio
 
 ## What this is
 
-- Landing page for the MailerLite newsletter
+- Landing page for the MailerLite Action Plan Letter
 - `/books/` index
 - One Markdown file per book in `_books/`
 - YAML front matter for SEO, CTA tracking, and notes
@@ -63,14 +63,6 @@ The JavaScript stores the `source` value in MailerLite as:
 
 ```text
 signup_source
-```
-
-Fallback values include:
-
-```text
-homepage-hero
-homepage-bottom
-book slug
 ```
 
 ## GitHub Pages

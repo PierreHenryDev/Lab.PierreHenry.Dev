@@ -1,19 +1,19 @@
 {%- assign capture_id = include.id | default: "emailCapture" -%}
 {%- assign source = include.source | default: "book-page" -%}
-{%- assign headline = include.headline | default: "Get one daily book-based action." -%}
-{%- assign description = include.description | default: "Join the free email for engineers working towards FIRE. Each morning, get one practical action from books on money, productivity, career and investing." -%}
-{%- assign button = include.button | default: "Get the daily action" -%}
+{%- assign headline = include.headline | default: "Get the weekly Action Plan Letter." -%}
+{%- assign description = include.description | default: "Join the free weekly Action Plan Letter for engineers working towards FIRE. Each week, get one practical plan from powerful books on money, habits, focus, investing and career leverage." -%}
+{%- assign button = include.button | default: "Get the weekly plan" -%}
 
 <section class="email-capture email-capture-{{ include.variant | default: 'default' }}" aria-labelledby="{{ capture_id }}Title">
   <div class="email-capture-content">
-    <p class="eyebrow">Free daily email</p>
+    <p class="eyebrow">Free weekly Action Plan Letter</p>
     <h2 id="{{ capture_id }}Title">{{ headline }}</h2>
     <p>{{ description }}</p>
 
     <div class="trust-row" aria-label="What you will receive">
-      <span>One idea</span>
-      <span>One action</span>
-      <span>5 to 10 minutes</span>
+      <span>One book</span>
+      <span>One plan</span>
+      <span>One week</span>
     </div>
   </div>
 
@@ -49,7 +49,7 @@
         <button class="button primary" type="submit">{{ button }}</button>
       </div>
 
-      <p class="form-note">No long summaries. No extra theory. Just daily action.</p>
+      <p class="form-note">No long summaries. No extra theory. Just a weekly plan you can apply.</p>
     </form>
   </div>
 </section>

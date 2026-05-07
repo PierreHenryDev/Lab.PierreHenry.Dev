@@ -18,7 +18,7 @@ seo:
   meta_description: "Three practical ideas and actions from Atomic Habits for engineers working towards FIRE."
   canonical_url: "https://lab.pierrehenry.dev/books/atomic-habits/"
 cta:
-  label: "Get one daily book-based action"
+  label: "Get the weekly action plan"
   url: "https://lab.pierrehenry.dev?source=book-atomic-habits"
 summary:
   one_line: "Small systems beat motivation when you want to save, invest and focus consistently."
@@ -51,7 +51,7 @@ Many engineers working towards FIRE already know the theory. The hard part is ap
 
 ### 1. Behaviour matters
 
-Knowledge does not help much if nothing changes in your daily actions.
+Knowledge does not help much if it never becomes a practical weekly plan.
 
 **Action:** Pick one small behaviour to change today.
 
@@ -71,8 +71,8 @@ One useful action repeated weekly can matter more than another full summary.
 
 This book is useful when it becomes action, not when it stays as notes.
 
-## Get the daily action
+## Get the weekly plan
 
-Want one daily book-based action for engineers working towards FIRE?
+Want one weekly book-based action plan for engineers working towards FIRE?
 
-[Get the daily action](https://lab.pierrehenry.dev?source=book-atomic-habits)
+[Get the weekly plan](https://lab.pierrehenry.dev?source=book-atomic-habits)
