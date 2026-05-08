@@ -34,7 +34,7 @@ permalink: /books/
             <span>{{ book.actions.size }} actions</span>
           </div>
 
-          <span class="read-more">Read actions →</span>
+          <span class="read-more">View action plan →</span>
         </a>
       {% endfor %}
     </div>

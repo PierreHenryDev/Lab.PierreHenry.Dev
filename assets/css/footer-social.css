@@ -2,6 +2,11 @@
   max-width: 620px;
 }
 
+.footer-brand > p {
+  margin-top: 8px;
+  max-width: 560px;
+}
+
 .footer-links {
   min-width: 220px;
 }
@@ -11,57 +16,63 @@
 }
 
 .footer-social {
+  margin-top: 20px;
+}
+
+.footer-social-title {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer-social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
+  gap: 12px;
 }
 
-.footer-social a {
-  min-height: 38px;
+.footer-social-links a {
+  min-height: 42px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 12px;
-  border: 1px solid var(--border);
+  gap: 9px;
+  padding: 0 14px;
+  border: 1px solid rgba(31, 111, 74, 0.12);
   border-radius: 999px;
-  background: var(--surface);
+  background: rgba(255,255,255,0.92);
   color: var(--primary);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 850;
   text-decoration: none;
+  box-shadow: 0 10px 30px rgba(17,24,39,0.05);
   transition:
-    transform 160ms ease,
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease;
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.footer-social a:hover {
-  transform: translateY(-1px);
-  border-color: rgba(31, 111, 74, 0.22);
+.footer-social-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(31, 111, 74, 0.28);
   background: var(--soft-green);
   color: var(--primary-dark);
   text-decoration: none;
+  box-shadow: 0 16px 34px rgba(17,24,39,0.08);
 }
 
-.footer-social svg {
+.footer-social-links a:focus-visible {
+  outline: 3px solid rgba(31,111,74,0.24);
+  outline-offset: 3px;
+}
+
+.footer-social-links svg {
   width: 17px;
   height: 17px;
   fill: currentColor;
   flex: 0 0 auto;
-}
-
-@media (max-width: 920px) {
-  .footer-social {
-    margin-top: 14px;
-  }
-
-  .footer-social a {
-    width: fit-content;
-  }
-
-  .footer-links {
-    min-width: 0;
-  }
 }
