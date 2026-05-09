@@ -1,20 +1,20 @@
 ---
 layout: default
 title: "Book Action Library"
-description: "Book-based action plans for engineers working towards FIRE."
+description: "Weekly action plans from powerful books for software engineers working towards FIRE."
 seo:
-  meta_title: "Book Action Library | Weekly Book-Based Action Plans for Engineers Working Towards FIRE"
-  meta_description: "Browse practical book-action guides that turn money, productivity, career and investing books into weekly action plans for engineers working towards FIRE."
+  meta_title: "Book Action Library | Weekly Action Plans From Powerful Books"
+  meta_description: "Browse practical action plans from books on finance, wealth, self-improvement, habits, focus and early retirement."
 permalink: /books/
 ---
 
 <section class="page">
   <div class="container">
     <p class="eyebrow">Book Action Library</p>
-    <h1>Books turned into weekly action plans for engineers working towards FIRE.</h1>
+    <h1>Powerful books turned into weekly action plans.</h1>
     <p class="lead">
-      Each guide gives useful ideas, practical actions, and a clear plan from one book.
-      No long summaries. No theory collection.
+      Built for software engineers who want better money decisions, stronger habits, clearer focus and progress towards FIRE.
+      No long summaries. No theory collection. Just practical plans you can apply.
     </p>
   </div>
 </section>

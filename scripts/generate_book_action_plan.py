@@ -74,7 +74,7 @@ Book:
 - angle: {book.get('angle', '')}
 
 Audience:
-Engineers working towards FIRE who read useful books but often apply too little because they lack time, consistency and a simple weekly implementation system.
+Software engineers and tech professionals working towards FIRE who read useful books but often apply too little because they lack time, consistency and a simple weekly implementation system.
 
 Brand:
 Your Success is Closer Than You Think™
@@ -103,6 +103,8 @@ Rules:
 - Make actions concrete and doable in 5 to 20 minutes.
 - Avoid generic summary language.
 - Focus on implementation.
+- Target finance, wealth, self-improvement, habits, focus and early retirement.
+- Make the page feel specific to software engineers, not a generic audience.
 - Write in clear British English.
 """
 
@@ -171,7 +173,7 @@ author: {yaml_string(book["author"])}
 slug: {yaml_string(slug)}
 date: {today}
 status: "published"
-audience: "Engineers working towards FIRE"
+audience: "Software engineers working towards FIRE"
 category: {yaml_string(book.get("category", "Book action plan"))}
 tags: [FIRE, engineers, weekly action plan]
 session:

@@ -45,7 +45,7 @@ jobs:
           SITE_URL: https://lab.pierrehenry.dev
         run: |
           python scripts/generate_book_action_plan.py
-          python scripts/refresh_homepage_copy.py
+          python scripts/update_homepage_latest_plan.py
           python scripts/quality_check.py
 
       - name: Commit generated content

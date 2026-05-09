@@ -1,3 +1,4 @@
+# Weekly Action Plan backlog.
 # Books are processed from top to bottom.
 # Set enabled: false to skip a book.
 # The workflow will not regenerate a book if _books/<slug>.md already exists.
@@ -5,7 +6,7 @@
 - title: "Your Money or Your Life"
   author: "Vicki Robin"
   category: "Money behaviour"
-  angle: "Money as life energy for engineers working towards FIRE"
+  angle: "Money as life energy for software engineers working towards FIRE"
   enabled: true
 
 - title: "Essentialism"
@@ -20,20 +21,26 @@
   angle: "Automate money flows and reduce decision fatigue"
   enabled: true
 
-- title: "The 4-Hour Workweek"
-  author: "Tim Ferriss"
-  category: "Career leverage"
-  angle: "Reduce low-value work and design more freedom"
-  enabled: true
-
 - title: "So Good They Can’t Ignore You"
   author: "Cal Newport"
   category: "Career leverage"
-  angle: "Build rare skills that increase optionality"
+  angle: "Build rare skills that increase long-term earning power and optionality"
   enabled: true
 
 - title: "The Almanack of Naval Ravikant"
   author: "Eric Jorgenson"
   category: "Wealth and judgement"
-  angle: "Leverage, judgement and long-term thinking"
+  angle: "Leverage, judgement and long-term thinking for wealth and freedom"
+  enabled: true
+
+- title: "The Millionaire Next Door"
+  author: "Thomas J. Stanley and William D. Danko"
+  category: "Wealth behaviour"
+  angle: "Build wealth through behaviour, discipline and low lifestyle inflation"
+  enabled: true
+
+- title: "Die With Zero"
+  author: "Bill Perkins"
+  category: "Money and life design"
+  angle: "Use money intentionally without delaying life forever"
   enabled: true

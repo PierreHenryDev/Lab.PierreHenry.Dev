@@ -1,18 +1,16 @@
-# Your Success is Closer Than You Think™
+# Closer Than You Think™
 
-GitHub Pages-ready Jekyll site with a landing page and Markdown-first Book Action Library.
+GitHub Pages-ready Jekyll site with a landing page, weekly Action Plan Letter capture and Markdown-first Book Action Library.
 
 ## What this is
 
 - Landing page for the MailerLite Action Plan Letter
 - `/books/` index
 - One Markdown file per book in `_books/`
-- YAML front matter for SEO, CTA tracking, and notes
 - Source tracking via MailerLite hidden fields
+- Optional GitHub Actions autopilot for weekly book action plans
 
 ## Python setup
-
-Use a virtual environment:
 
 ```bash
 python3 -m venv venv
@@ -26,7 +24,7 @@ Windows:
 venv\Scripts\activate
 ```
 
-## Add a new book
+## Add a new book manually
 
 ```bash
 python3 scripts/new_book_action.py --title "Deep Work" --author "Cal Newport" --category "Focus and career leverage"
@@ -47,22 +45,42 @@ _includes/email-capture.html
 _includes/email-capture-inline.html
 ```
 
-Keep this hidden field:
+The JavaScript stores the URL `source` value in MailerLite as:
 
-```html
-<input type="hidden" name="fields[signup_source]" id="{{ capture_id }}Source" value="{{ source }}">
+```text
+signup_source
 ```
 
-Use tracked links:
+Example:
 
 ```text
 https://lab.pierrehenry.dev?source=linkedin-fire-001
 ```
 
-The JavaScript stores the `source` value in MailerLite as:
+## Weekly Action Plan Autopilot
+
+Workflow:
 
 ```text
-signup_source
+.github/workflows/weekly-action-plan-autopilot.yml
+```
+
+Book queue:
+
+```text
+data/books_backlog.yml
+```
+
+Required repository secret:
+
+```text
+OPENAI_API_KEY
+```
+
+Manual run:
+
+```text
+GitHub → Actions → Weekly Action Plan Autopilot → Run workflow
 ```
 
 ## GitHub Pages
