@@ -1,0 +1,39 @@
+# Books are processed from top to bottom.
+# Set enabled: false to skip a book.
+# The workflow will not regenerate a book if _books/<slug>.md already exists.
+
+- title: "Your Money or Your Life"
+  author: "Vicki Robin"
+  category: "Money behaviour"
+  angle: "Money as life energy for engineers working towards FIRE"
+  enabled: true
+
+- title: "Essentialism"
+  author: "Greg McKeown"
+  category: "Focus and decision-making"
+  angle: "Remove low-value commitments to create more time and freedom"
+  enabled: true
+
+- title: "I Will Teach You To Be Rich"
+  author: "Ramit Sethi"
+  category: "Money systems"
+  angle: "Automate money flows and reduce decision fatigue"
+  enabled: true
+
+- title: "The 4-Hour Workweek"
+  author: "Tim Ferriss"
+  category: "Career leverage"
+  angle: "Reduce low-value work and design more freedom"
+  enabled: true
+
+- title: "So Good They Can’t Ignore You"
+  author: "Cal Newport"
+  category: "Career leverage"
+  angle: "Build rare skills that increase optionality"
+  enabled: true
+
+- title: "The Almanack of Naval Ravikant"
+  author: "Eric Jorgenson"
+  category: "Wealth and judgement"
+  angle: "Leverage, judgement and long-term thinking"
+  enabled: true

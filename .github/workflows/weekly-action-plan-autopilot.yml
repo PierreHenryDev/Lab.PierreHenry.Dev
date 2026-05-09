@@ -1,0 +1,63 @@
+name: Weekly Action Plan Autopilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      cadence:
+        description: "Generation cadence label"
+        required: false
+        default: "manual"
+  schedule:
+    # Every Monday at 08:00 UTC.
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-action-plan-autopilot
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai pyyaml
+
+      - name: Generate next weekly action plan
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4o-mini
+          SITE_URL: https://lab.pierrehenry.dev
+        run: |
+          python scripts/generate_book_action_plan.py
+          python scripts/refresh_homepage_copy.py
+          python scripts/quality_check.py
+
+      - name: Commit generated content
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add _books _data reports index.html
+          git commit -m "Generate weekly book action plan"
+          git push
