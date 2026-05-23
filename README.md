@@ -105,16 +105,6 @@ Border: #E5E7EB
 Background: #FAF7F0
 ```
 
-## Article capture
-
-Each book article includes:
-
-```text
-Top capture block
-Bottom capture block
-Sticky sidebar CTA
-```
-
 ## Author
 
 [![Pierre-Henry Soria](https://avatars0.githubusercontent.com/u/1325411?s=200)](https://ph7.me "Pierre-Henry Soria, Software Developer")
